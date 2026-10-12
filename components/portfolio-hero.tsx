@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 export function PortfolioHero() {
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -68,6 +69,16 @@ export function PortfolioHero() {
           <md-filled-button href="#experience">View Experience</md-filled-button>
           <md-outlined-button href="mailto:mpondojulia@gmail.com">Get in Touch</md-outlined-button>
         </div>
+      </div>
+      <div className="hero-image">
+        <Image 
+          src="/profile.jpg" 
+          alt="Julia Mpondo" 
+          width={260} 
+          height={260}
+          className="hero-profile-image"
+          priority
+        />
       </div>
     </section>
   )

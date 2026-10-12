@@ -42,6 +42,12 @@
   color: var(--md-sys-color-on-primary);
   font-size: 13px;
   letter-spacing: 0.08em;
+  overflow: hidden;
+}
+
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .wordmark-text {
@@ -70,6 +76,8 @@
   min-height: min(720px, calc(100vh - 72px));
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 48px;
   padding: 112px 0 96px;
   position: relative;
 }
@@ -85,11 +93,27 @@
   background: var(--md-sys-color-primary-container);
   opacity: 0.45;
   filter: blur(2px);
-  z-index: -1;
+  z-index: 0;
+}
+
+.hero-image {
+  flex-shrink: 0;
+  position: absolute;
+  right: 2%;
+  top: 18%;
+  z-index: 2;
+}
+
+.hero-profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-eyebrow {
@@ -356,6 +380,26 @@
   .hero {
     min-height: auto;
     padding: 88px 0 72px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    order: -1;
+    align-self: center;
+    margin-bottom: 32px;
+  }
+
+  .hero-profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero::after {
+    display: none;
   }
 
   .two-column-sections,
@@ -397,13 +441,13 @@
     gap: 16px;
   }
 
-  .hero-title {
-    font-size: clamp(3.8rem, 20vw, 6rem);
-  }
-
-  .hero::after {
+  .hero-profile-image {
     width: 150px;
     height: 150px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.8rem, 20vw, 6rem);
   }
 
   .experience-header {
