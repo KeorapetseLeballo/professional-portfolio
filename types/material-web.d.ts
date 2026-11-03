@@ -8,6 +8,8 @@ declare module 'react' {
       'md-icon': React.HTMLAttributes<HTMLElement>
       'md-icon-button': React.HTMLAttributes<HTMLElement>
       'md-chip': React.HTMLAttributes<HTMLElement> & { label?: string }
+      'md-assist-chip': React.HTMLAttributes<HTMLElement> & { label?: string }
+      'md-filter-chip': React.HTMLAttributes<HTMLElement> & { label?: string }
     }
   }
 }

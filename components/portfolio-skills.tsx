@@ -59,7 +59,7 @@ export function PortfolioSkills() {
           <div ref={skillsRef} className="skill-list">
             {softSkills.map((skill) => (
               <div key={skill} className="skill-chip">
-                <md-chip label={skill} />
+                <md-assist-chip label={skill}></md-assist-chip>
               </div>
             ))}
           </div>
@@ -70,7 +70,7 @@ export function PortfolioSkills() {
           <div className="skill-list">
             {technicalSkills.map((skill) => (
               <div key={skill} className="skill-chip">
-                <md-chip label={skill} />
+                <md-assist-chip label={skill}></md-assist-chip>
               </div>
             ))}
           </div>
