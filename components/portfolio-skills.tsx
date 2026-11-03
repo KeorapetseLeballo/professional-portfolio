@@ -32,7 +32,7 @@ export function PortfolioSkills() {
 
   const softSkills = [
     'Organisational Skills',
-    'Communication',
+    'Communication Skills',
     'Attention to Detail',
     'Customer Service',
     'Interpersonal Skills',
@@ -40,12 +40,12 @@ export function PortfolioSkills() {
   ]
 
   const technicalSkills = [
-    'Microsoft Office',
-    'Data Entry',
     'Computer Literacy',
-    'Research & Analysis',
-    'Administrative Support',
-    'Problem Solving',
+    'Microsoft Office',
+    'Typing',
+    'Data Entry',
+    'Research and Analysis',
+    'Administrative Skills',
   ]
 
   return (
